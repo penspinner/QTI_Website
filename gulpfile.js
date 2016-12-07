@@ -5,12 +5,14 @@ var gulp = require('gulp'),
     gulp_if = require('gulp-if'),
     gulp_imagemin = require('gulp-imagemin'),
     gulp_minify_html = require('gulp-minify-html-2'),
+    gulp_sass = require('gulp-sass'),
     gulp_uglify = require('gulp-uglify'),
     gulp_util = require('gulp-util');
 
-var env,
+var env, sassStyle,
     jsSources,
     cssSources,
+    sassSources,
     htmlSources,
     fontSources,
     imageSources;
@@ -29,8 +31,8 @@ if (env)
   sassStyle = 'expanded';
 }
 
+index = 'builds/development/index.html';
 htmlSources = [
-    'builds/development/index.html',
     'builds/development/partials/**/*'
 ];
 jsSources = [
@@ -43,14 +45,20 @@ jsSources = [
 ];
 // jsSources = 'js/**/*';
 cssSources = 'css/style.css';
+sassSources = 'components/sass/*.scss';
 fontSources = 'builds/development/assets/fonts/*';
 imageSources = 'builds/development/assets/images/**/*';
 
 gulp.task('html', function()
 {
-    gulp.src(htmlSources)
+    gulp.src(index)
         .pipe(gulp_if(env, gulp_minify_html({empty : true})))
         .pipe(gulp_if(env, gulp.dest(outputDir)))
+        .pipe(gulp_connect.reload());
+
+    gulp.src(htmlSources)
+        .pipe(gulp_if(env, gulp_minify_html({empty : true})))
+        .pipe(gulp_if(env, gulp.dest(outputDir + 'partials')))
         .pipe(gulp_connect.reload());
 });
 
@@ -68,6 +76,14 @@ gulp.task('css', function()
 {
     gulp.src(cssSources)
         .pipe(gulp_if(env, gulp_clean_css()))
+        .pipe(gulp.dest(outputDir + 'assets/css'))
+        .pipe(gulp_connect.reload());
+});
+
+gulp.task('sass', function()
+{
+    gulp.src(sassSources)
+        .pipe(gulp_sass({outputStyle: sassStyle}).on('error', gulp_sass.logError))
         .pipe(gulp.dest(outputDir + 'assets/css'))
         .pipe(gulp_connect.reload());
 });
@@ -92,6 +108,7 @@ gulp.task('watch', function()
     gulp.watch(htmlSources, ['html']);
     gulp.watch(jsSources, ['js']);
     gulp.watch(cssSources, ['css']);
+    gulp.watch(sassSources, ['sass']);
     gulp.watch(fontSources, ['fonts']);
     gulp.watch(imageSources, ['images']);
 });
@@ -105,4 +122,4 @@ gulp.task('connect', function()
     })
 });
 
-gulp.task('default', ['html','js', 'css', 'fonts', 'images','connect', 'watch']);
+gulp.task('default', ['html','js', 'sass', 'fonts', 'images','connect', 'watch']);
