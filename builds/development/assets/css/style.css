@@ -15,7 +15,7 @@ body {
 header {
   position: fixed;
   top: 0px;
-  background-color: #71232F;
+  background-color: #1f1227;
   z-index: 1000;
   width: 100%;
   padding: 0px 15%;
@@ -23,7 +23,7 @@ header {
 
 footer {
   /*background: linear-gradient(to top, black, #463E3E);*/
-  background-color: #1D1C28;
+  background-color: #1d1c28;
   color: white;
   bottom: 0;
   padding: 0 0 10px;
@@ -361,9 +361,13 @@ figcaption {
   margin: 0 auto;
 }
 
+.background_beige {
+  background-color: #f2e7c2;
+}
+
 /* Home page */
 .info_section {
-  background-color: #334D73;
+  background-color: #334d73;
 }
 
 /* Navigation bar */
@@ -435,12 +439,12 @@ figcaption {
 }
 
 .active {
-  border-color: white !important;
+  border-color: #f2e7c2 !important;
 }
 
 .nav-list-item a:hover:not(.active), .dropdown:hover {
-  border-color: #C0C0C0;
-  color: #C0C0C0;
+  border-color: #f2e7c2;
+  color: #f2e7c2;
 }
 
 li.dropdown {
