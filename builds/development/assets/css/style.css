@@ -23,7 +23,7 @@ header {
 
 footer {
   /*background: linear-gradient(to top, black, #463E3E);*/
-  background-color: #334D73;
+  background-color: #1D1C28;
   color: white;
   bottom: 0;
   padding: 0 0 10px;
@@ -363,7 +363,7 @@ figcaption {
 
 /* Home page */
 .info_section {
-  background-color: #1D1C28;
+  background-color: #334D73;
 }
 
 /* Navigation bar */
