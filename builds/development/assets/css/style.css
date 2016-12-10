@@ -15,7 +15,7 @@ body {
 header {
   position: fixed;
   top: 0px;
-  background-color: #1f1227;
+  background-color: rgba(31, 18, 39, 0.8);
   z-index: 1000;
   width: 100%;
   padding: 0px 15%;
@@ -229,8 +229,8 @@ figcaption {
 }
 
 .icons a img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: white;
 }
