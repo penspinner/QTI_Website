@@ -118,6 +118,8 @@ gulp.task('connect', function()
     gulp_connect.server
     ({
         root: outputDir,
+        host: '0.0.0.0',
+        port: 3333,
         livereload: true
     })
 });

@@ -3,25 +3,31 @@
 *{ margin: 0; padding: 0; box-sizing: border-box;}
 
 /* Overwrite the default tags */
-body {font-family: 'Roboto', sans-serif;}
+body {font-family: $mainFont;}
 
 header {position: fixed; top: 0px; background-color: $purple; z-index: 1000; width: 100%; padding: 0px 15%;}
 
 footer
 {
 	/*background: linear-gradient(to top, black, #463E3E);*/
-    background-color: $darkblue;
+    background-color: $purple;
 	color: white;
 	bottom: 0;
+	font-size: 15px;
 	padding: 0 0 10px;
 }
 
-main {margin-top: 80px; font-size: 18px;}
+main {font-size: 16px;}
 
 section {width: 100%;}
 
-h1, h2, h3, h4, h5 {padding: 10px 0; font-family: 'Lora';}
-h1 {font-size: 34px;} h2 {font-size: 30px;} h3 {font-size: 28px;} h4 {font-size: 26px;} h5 {font-size: 24px;}
+h1, h2, h3, h4, h5, h6 {padding: 10px 0;}
+h1 {font-size: 30px;} 
+h2 {font-size: 26px;} 
+h3 {font-size: 22px;} 
+h4 {font-size: 20px;} 
+h5 {font-size: 18px;} 
+h6 {font-size: 17px;}
 
 p {padding: 10px 0; line-height: 1.5;}
 ul {line-height: 1.5;}
