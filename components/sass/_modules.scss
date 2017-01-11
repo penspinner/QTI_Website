@@ -5,7 +5,7 @@
 .image_section, .half_section {width: 50%; margin: 0 25%; font-size: 22px;} 
 .image_section > img {max-width: 100%; max-height: 100%; float:right;}
 .descr_section {width: 50%;}
-.descr {width: 60%; float: right;}
+.descr {width: 50%; float: right;}
 .descr_image {width: 40%; float: left; padding: 10px;}
 .footer_text {color: #aaa; font-size: 10px}
 .clear {clear: both;}
@@ -48,6 +48,7 @@
 .iframe_caption {max-width: 560px; margin: 0 auto;}
 .background_beige {background-color: $beige;}
 .header-padding {padding-top: 80px;}
+.whitewithshadow {color: white; text-shadow: 3px 3px 3px #000;}
 .about 
 {
 	background-image: url(/assets/images/page_bg/bg_network.jpg);
@@ -169,7 +170,16 @@ li.dropdown {display: inline-block;}
 .cycle-pager-active {/*border: solid 1px green; border-radius: 4px;*/opacity: 1;}
 .cycle-overlay 
 {
-	opacity: 0.75; text-align: center; position: absolute; bottom: 0; width: 100%; padding: 30px;
+	@extend .pad;
+	position: absolute; bottom: 50%; width: 100%;
+	color: white; text-shadow: 3px 3px 3px #000;
+
+	p {width: 60%; text-align: center; margin: 0 auto;}
 }
 #thumbnail-pager img {border-radius: 5px;}
+.staffing 
+{
+	color: $purple; 
+	text-shadow: -2px -2px 2px darkgray, -2px 2px 2px darkgray, 2px -2px 2px darkgray, 2px 2px 2px darkgray;
+}
 /* Cycle slideshow end */
