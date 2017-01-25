@@ -9,13 +9,13 @@
 
 /* Overwrite the default tags */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 header {
   position: fixed;
   top: 0px;
-  background-color: rgba(31, 18, 39, 0.8);
+  background-color: rgba(31, 18, 39, 0.9);
   z-index: 1000;
   width: 100%;
   padding: 0px 15%;
@@ -23,24 +23,23 @@ header {
 
 footer {
   /*background: linear-gradient(to top, black, #463E3E);*/
-  background-color: #1d1c28;
+  background-color: rgba(31, 18, 39, 0.9);
   color: white;
   bottom: 0;
+  font-size: 15px;
   padding: 0 0 10px;
 }
 
 main {
-  margin-top: 80px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 section {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
-  font-family: 'Lora';
 }
 
 h1 {
@@ -48,19 +47,23 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 28px;
-}
-
-h4 {
   font-size: 26px;
 }
 
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
 h5 {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 17px;
 }
 
 p {
@@ -148,12 +151,12 @@ figcaption {
 }
 
 .descr_section {
-  width: 50%;
+  width: 60%;
 }
 
 .descr {
-  width: 60%;
-  float: left;
+  width: 50%;
+  float: right;
 }
 
 .descr_image {
@@ -177,14 +180,6 @@ figcaption {
 
 .inline-block {
   display: inline-block;
-}
-
-.lora {
-  font-family: 'Lora', serif;
-}
-
-.raleway {
-  font-family: 'Raleway', sans-serif;
 }
 
 .light_gray {
@@ -286,7 +281,7 @@ figcaption {
   display: inline-block;
 }
 
-.copyright-footer, .pad {
+.copyright-footer, .pad, .cycle-overlay {
   padding: 10px 15% 10px 15%;
 }
 
@@ -365,6 +360,25 @@ figcaption {
   background-color: #f2e7c2;
 }
 
+.header-padding {
+  padding-top: 80px;
+}
+
+.whitewithshadow {
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+}
+
+.about {
+  background-image: url(/assets/images/page_bg/bg_network.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.about p {
+  text-shadow: 3px 3px 3px #000;
+}
+
 /* Home page */
 .info_section {
   background-color: #334d73;
@@ -426,7 +440,6 @@ figcaption {
 .nav-list-item a, .dropbtn {
   display: inline-block;
   color: white;
-  font-family: 'Raleway';
   font-size: 18px;
   text-align: center;
   padding: 12.5px 10px;
@@ -510,16 +523,26 @@ li.dropdown {
 }
 
 .cycle-overlay {
-  opacity: 0.75;
-  text-align: center;
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   width: 100%;
-  padding: 30px;
+  color: white;
+  text-shadow: 3px 3px 3px #000;
+}
+
+.cycle-overlay p {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #thumbnail-pager img {
   border-radius: 5px;
+}
+
+.staffing {
+  color: rgba(31, 18, 39, 0.9);
+  text-shadow: -2px -2px 2px darkgray, -2px 2px 2px darkgray, 2px -2px 2px darkgray, 2px 2px 2px darkgray;
 }
 
 /* Cycle slideshow end */
@@ -527,7 +550,7 @@ li.dropdown {
   header {
     padding: 0 5%;
   }
-  .pad {
+  .pad, .cycle-overlay {
     padding: 10px 5%;
   }
   .pad2 {
@@ -601,7 +624,7 @@ li.dropdown {
     width: 100%;
     padding: 10px 0 10px;
   }
-  .copyright-footer, .pad {
+  .copyright-footer, .pad, .cycle-overlay {
     padding: 10px 15px 10px 15px;
   }
   .descr, .descr_image, .descr_section {

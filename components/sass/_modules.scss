@@ -4,8 +4,8 @@
 .logo img {width: 160px; height: 80px;}
 .image_section, .half_section {width: 50%; margin: 0 25%; font-size: 22px;} 
 .image_section > img {max-width: 100%; max-height: 100%; float:right;}
-.descr_section {width: 50%;}
-.descr {width: 50%; float: right;}
+.descr_section {width: 60%; margin: 0 auto;}
+.descr {width: 60%; float: right; p {text-align: justify;}}
 .descr_image {width: 40%; float: left; padding: 10px;}
 .footer_text {color: #aaa; font-size: 10px}
 .clear {clear: both;}
@@ -30,7 +30,7 @@
 .footer-column .icon {background-color: white; border-radius: 50%; width: 20px; height: 20px;}
 .copyright-footer .icon {background-color: white; border-radius: 50%; width: 25px; height: 25px;}
 .copyright-footer a {display: inline-block;}
-.copyright-footer, .pad {padding: 10px 15% 10px 15%;}
+.copyright-footer, .pad {padding: 10px 0.5in 10px 0.5in;}
 .pad2 {padding: 0px 15%;}
 .blue_background {background-color: #CCDAE2}
 .gray_border {border: 0.5px solid #E7E7E7; background-color: #E7E7E7;}
@@ -49,10 +49,11 @@
 .background_beige {background-color: $beige;}
 .header-padding {padding-top: 80px;}
 .whitewithshadow {color: white; text-shadow: 3px 3px 3px #000;}
-.about 
+.about, #content
 {
-	background-image: url(/assets/images/page_bg/bg_network.jpg);
-	background-size: cover;
+//	background-image: url(/assets/images/page_bg/bg_network.jpg);
+//	background-size: cover;
+    background: linear-gradient(to bottom, $purple, gray);
 	color: white; 
 	p 
 	{
@@ -60,6 +61,7 @@
 					2px -2px 0 #000,
 					-2px 2px 0 #000,*/
 					3px 3px 3px #000; 
+        text-align: justify;
 	}
 }
 
@@ -173,6 +175,7 @@ li.dropdown {display: inline-block;}
 	@extend .pad;
 	position: absolute; bottom: 50%; width: 100%;
 	color: white; text-shadow: 3px 3px 3px #000;
+    background-color: rgba(10, 10, 10, 0.4);
 
 	p {width: 60%; text-align: center; margin: 0 auto;}
 }
