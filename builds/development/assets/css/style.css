@@ -39,7 +39,7 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding: 10px 0;
+  padding: 35px 0;
 }
 
 h1 {
@@ -102,7 +102,6 @@ blockquote, cite {
 
 section blockquote:hover {
   transform: translateY(-5px);
-  background-color: #f1f1f1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 2px 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
@@ -117,6 +116,10 @@ figcaption {
 
 .gray_caption {
   background-color: #E7E7E7;
+}
+
+img {
+  max-width: 100%;
 }
 
 .icon_underheading {
@@ -152,11 +155,16 @@ figcaption {
 
 .descr_section {
   width: 60%;
+  margin: 0 auto;
 }
 
 .descr {
-  width: 50%;
+  width: 60%;
   float: right;
+}
+
+.descr p {
+  text-align: justify;
 }
 
 .descr_image {
@@ -282,7 +290,7 @@ figcaption {
 }
 
 .copyright-footer, .pad, .cycle-overlay {
-  padding: 10px 15% 10px 15%;
+  padding: 10px 0.5in 10px 0.5in;
 }
 
 .pad2 {
@@ -369,14 +377,14 @@ figcaption {
   text-shadow: 3px 3px 3px #000;
 }
 
-.about {
-  background-image: url(/assets/images/page_bg/bg_network.jpg);
-  background-size: cover;
+.about, #content {
+  background: linear-gradient(to bottom, rgba(31, 18, 39, 0.9), gray);
   color: white;
 }
 
-.about p {
+.about p, #content p {
   text-shadow: 3px 3px 3px #000;
+  text-align: justify;
 }
 
 /* Home page */
@@ -508,6 +516,7 @@ li.dropdown {
   padding: 5px 0px;
   text-align: center;
   overflow: hidden;
+  background-color: black;
 }
 
 .cycle-pager > * {
@@ -528,6 +537,7 @@ li.dropdown {
   width: 100%;
   color: white;
   text-shadow: 3px 3px 3px #000;
+  background-color: rgba(10, 10, 10, 0.4);
 }
 
 .cycle-overlay p {
