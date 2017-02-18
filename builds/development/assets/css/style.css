@@ -18,7 +18,7 @@ header {
   background-color: rgba(31, 18, 39, 0.9);
   z-index: 1000;
   width: 100%;
-  padding: 0px 15%;
+  padding: 0px 10%;
 }
 
 footer {
@@ -137,8 +137,14 @@ img {
 }
 
 .logo img {
-  width: 160px;
+  width: 100px;
   height: 80px;
+}
+
+.logo span {
+  color: white;
+  width: 150px;
+  font-size: 22px;
 }
 
 .image_section, .half_section {
@@ -433,7 +439,7 @@ img {
 
 .navbar {
   float: right;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .nav-list {

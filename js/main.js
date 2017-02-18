@@ -2,6 +2,7 @@ angular.element(document).ready(function()
 {
 	var app = angular
 		.module("app", ['ui.router', 'QTIControllers'])
+        .run(['$state', '$stateParams', function($state, $stateParams) {}])
 		.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
 			function($stateProvider, $urlRouterProvider, $locationProvider)
 			{

@@ -120,7 +120,8 @@ gulp.task('connect', function()
         root: outputDir,
         host: '0.0.0.0',
         port: 3333,
-        livereload: true
+        livereload: true,
+        fallback: outputDir + 'index.html'
     })
 });
 
