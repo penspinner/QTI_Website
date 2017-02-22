@@ -1,5 +1,11 @@
 /* Import Lora font */
 @import 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Raleway:400,400i,700,700i,800|Roboto';
+@font-face {
+  font-family: 'CooperHewitt';
+  src: url(../fonts/CooperHewitt-Thin.otf);
+  font-weight: normal;
+}
+
 /* CSS Reset */
 * {
   margin: 0;
@@ -393,6 +399,10 @@ img {
   text-align: justify;
 }
 
+.cooper {
+  font-family: 'CooperHewitt';
+}
+
 /* Home page */
 .info_section {
   background-color: #334d73;
@@ -539,7 +549,7 @@ li.dropdown {
 
 .cycle-overlay {
   position: absolute;
-  bottom: 50%;
+  bottom: 35%;
   width: 100%;
   color: white;
   text-shadow: 3px 3px 3px #000;
@@ -547,8 +557,8 @@ li.dropdown {
 }
 
 .cycle-overlay p {
-  width: 60%;
-  text-align: center;
+  width: 100%;
+  text-align: center !important;
   margin: 0 auto;
 }
 

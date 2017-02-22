@@ -7,3 +7,11 @@ $darkblue : rgb(29,28,40);
 $purple : rgba(31,18,39,0.9);
 $darkred : rgb(133,35,47);
 
+@font-face
+{
+    font-family: 'CooperHewitt';
+    src: url(../fonts/CooperHewitt-Thin.otf);
+    font-weight: normal;
+}
+
+$cooper : 'CooperHewitt', sans-serif;

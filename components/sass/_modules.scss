@@ -65,6 +65,7 @@
         text-align: justify;
 	}
 }
+.cooper {font-family: 'CooperHewitt';}
 
 /* Home page */
 .info_section {background-color: $blue;}
@@ -174,11 +175,11 @@ li.dropdown {display: inline-block;}
 .cycle-overlay 
 {
 	@extend .pad;
-	position: absolute; bottom: 50%; width: 100%;
+	position: absolute; bottom: 35%; width: 100%;
 	color: white; text-shadow: 3px 3px 3px #000;
     background-color: rgba(10, 10, 10, 0.4);
 
-	p {width: 60%; text-align: center; margin: 0 auto;}
+	p {width: 100%; text-align: center !important; margin: 0 auto;}
 }
 #thumbnail-pager img {border-radius: 5px;}
 .staffing 
