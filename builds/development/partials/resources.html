@@ -1,6 +1,13 @@
 <!-- Main content of the home page -->
 <main id="content">
     <section class="pad header-padding">
+        <nav class="secondary-navbar" role="navigation">
+            <ul class="nav-list">
+                <li ng-repeat="tab in resourcesTabs" class="nav-list-item">
+                    <a ui-sref="{{ tab.url }}" ui-sref-active="active">{{ tab.name }}</a>
+                </li>
+            </ul>
+        </nav>
         <h2 class="one_line center">Invest your technology dollars correctly</h2>
     </section>
     <section class="pad">

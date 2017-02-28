@@ -4,6 +4,13 @@
         <h1 class="one_line">Keeping you up to speed with technology</h1>
     </section>-->
     <section class="header-padding pad">
+        <nav class="secondary-navbar" role="navigation">
+            <ul class="nav-list">
+                <li ng-repeat="tab in aboutTabs" class="nav-list-item">
+                    <a ui-sref="{{ tab.url }}" ui-sref-active="active">{{ tab.name }}</a>
+                </li>
+            </ul>
+        </nav>
         <div class="descr_section">
             <h1 class="cooper center">Keeping you up to speed with technology</h1>
         </div>
@@ -11,6 +18,7 @@
         <div style="background: url(assets/images/page_bg/bg_workflow.jpg)"></div>
         <div>
             <h2> Overview </h2>
+            <ui-view></ui-view>
             <p>
                 Quarterhorse Technology Incorporated (QTI) was founded in 1999 as a systems integrator. The vision was to create a bridge that would connect the needs of companies with solutions made available by vendors.  Throughout our history, we have cemented a close relationship with vendors through certifications and long term partnerships. These relationships allowed QTI to understand the needs of the customers and present solutions with leading edge technology to fit clients’ business plans.  Hardware and software longevity and solutions that complete all opportunities and cost, are factors that helped develop the relationship.  
             </p>

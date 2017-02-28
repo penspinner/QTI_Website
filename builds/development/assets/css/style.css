@@ -452,16 +452,16 @@ img {
   margin-top: 14px;
 }
 
-.nav-list {
+.navbar .nav-list {
   list-style-type: none;
   overflow: hidden;
 }
 
-.nav-list-item {
+.navbar .nav-list-item {
   display: inline-block;
 }
 
-.nav-list-item a, .dropbtn {
+.navbar .nav-list-item a, .dropbtn {
   display: inline-block;
   color: white;
   font-size: 18px;
@@ -477,11 +477,37 @@ img {
 
 .active {
   border-color: #f2e7c2 !important;
+  color: #f2e7c2 !important;
 }
 
 .nav-list-item a:hover:not(.active), .dropdown:hover {
   border-color: #f2e7c2;
   color: #f2e7c2;
+}
+
+.secondary-navbar {
+  text-align: center;
+}
+
+.secondary-navbar .nav-list {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.secondary-navbar .nav-list-item {
+  display: inline-block;
+}
+
+.secondary-navbar .nav-list-item a, .dropbtn {
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-color 1.5s ease-out, color 1.5s ease-out;
+  transition: border-color 1.5s ease-out, color 1.5s ease-out;
 }
 
 li.dropdown {
